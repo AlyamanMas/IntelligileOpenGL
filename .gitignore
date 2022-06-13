@@ -71,3 +71,25 @@ Thumbs.db
 *.dll
 *.exe
 
+# The following is user generated, while everything above is
+# from the project template
+.cmake/
+CMakeCache.txt
+CMakeFiles/
+CMakeLists.txt.user
+IntelligileOpenGL
+Libraries/glad/CMakeFiles/
+Libraries/glad/cmake_install.cmake
+Libraries/glfw/.appveyor.yml
+Libraries/glfw/.mailmap
+Libraries/glfw/CMake/
+Libraries/glfw/CMakeCache.txt
+Libraries/glfw/CMakeFiles/
+Libraries/glfw/cmake_install.cmake
+Libraries/glfw/cmake_uninstall.cmake
+Libraries/glfw/src/CMakeFiles/
+Libraries/glfw/src/cmake_install.cmake
+Libraries/glfw/tests/
+cmake_install.cmake
+main
+
