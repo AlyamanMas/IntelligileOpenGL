@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/sharing.dir/sharing.c.o -o sharing  ../src/libglfw3.a -lm /usr/lib/librt.a -lm -ldl 

@@ -16,7 +16,7 @@ int main()
   glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
   glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-  GLFWwindow* window = glfwCreateWindow(600, 400, "My Window is not BEING COLORED", 0, 0);
+  GLFWwindow* window = glfwCreateWindow(600, 400, "My Window", 0, 0);
   if (window == NULL)
     {
       cout << "Failed to create GLFW Window" << endl;
