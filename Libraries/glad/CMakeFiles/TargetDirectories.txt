@@ -1,0 +1,3 @@
+/home/yaman/Downloads/glad/CMakeFiles/glad.dir
+/home/yaman/Downloads/glad/CMakeFiles/edit_cache.dir
+/home/yaman/Downloads/glad/CMakeFiles/rebuild_cache.dir
