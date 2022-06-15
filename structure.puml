@@ -1,18 +1,14 @@
 @startuml
 !theme toy
 
-package shapes <<Rectangle>> {
-
-    interface Drawable {
-        {abstract} void drawToContext(context, float x, float y)
-    }
+namespace shapes <<Rectangle>> {
 
     abstract Shape {
         /'
          ' - float x0
          ' - float y0
          '/
-        - color
+        - gdi::Color color
         - float angle
         --
         .. Getters and setters ..
@@ -22,7 +18,8 @@ package shapes <<Rectangle>> {
         + {abstract} float getWidth()
         + {abstract} float getHeight()
     }
-    Shape -|> Drawable
+    Shape --|> gdi.Drawable
+    Shape::color - gdi.Color
 
     class Ellipse {
         - float r1
@@ -63,6 +60,15 @@ package shapes <<Rectangle>> {
         .. Getters and setters ..
     }
 
+    class Polygon {
+        - GLfloat* arr
+        --
+        + Polygon(GLfloat* arr)
+        .. Getters and setters ..
+    }
+
+    class Bezier
+
     /'   Relations
        ============= '/
 
@@ -74,10 +80,23 @@ package shapes <<Rectangle>> {
 
     Shape      <|-- Triangle
 
-    /'
-     ' Shape <|-- Polygon
-     ' Polygon "1" o-- "*" Triangle : " comprises"
-     '/
+    Polygon -|> Shape
+    Shape <|--- Bezier
+
+}
+
+namespace gdi <<Rectangle>> {
+    class Color << (S, #FF7700) Struct >> {
+        uint8_t red
+        uint8_t green
+        uint8_t blue
+    }
+
+    class Context {}
+
+    interface Drawable {
+        {abstract} void drawToContext(Context c, float x, float y)
+    }
 
 }
 
