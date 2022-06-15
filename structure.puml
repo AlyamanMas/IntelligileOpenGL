@@ -1,0 +1,89 @@
+@startuml
+!theme toy
+
+package shapes <<Rectangle>> {
+
+    interface Drawable {
+        {abstract} void drawToContext(context, float x, float y)
+    }
+
+    abstract Shape {
+        /'
+         ' - float x0
+         ' - float y0
+         '/
+        - color
+        - float angle
+        --
+        .. Getters and setters ..
+        /'
+         ' + {abstract} void drawToContext(context, float x, float y)
+         '/
+        + {abstract} float getWidth()
+        + {abstract} float getHeight()
+    }
+    Shape -|> Drawable
+
+    class Ellipse {
+        - float r1
+        - float r2
+        --
+        + Ellipse()
+        .. Getters and setters ..
+    }
+
+    class Circle {
+        + Circle(radius)
+        .. Getters and setters ..
+    }
+
+    note "Constructor and setters set r1,r2/width,height to same value" as SameNote
+    Circle .. SameNote
+
+    class Rectangle {
+        - float width
+        - float height
+        --
+        + Rectangle()
+        .. Getters and setters ..
+    }
+
+    class Square {
+        + Square(side)
+        .. Getters and setters ..
+    }
+    Square .. SameNote
+
+    class Triangle {
+        - float base
+        - float height
+        --
+        + Triangle(base, height)
+        + Triangle(p0, p1, p2)
+        .. Getters and setters ..
+    }
+
+    /'   Relations
+       ============= '/
+
+    Shape      <|-- Ellipse
+    Ellipse    <|-- Circle
+
+    Shape      <|-- Rectangle
+    Rectangle  <|-- Square
+
+    Shape      <|-- Triangle
+
+    /'
+     ' Shape <|-- Polygon
+     ' Polygon "1" o-- "*" Triangle : " comprises"
+     '/
+
+}
+
+/'
+ ' package "window and shapes controller" <<Rectangle>> {
+ '     Window "1" o-- "many" Shape : has
+ ' }
+ '/
+@enduml
