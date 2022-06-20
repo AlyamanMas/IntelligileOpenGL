@@ -1,7 +1,7 @@
-#include "./Context.hpp"
 #include <GLFW/glfw3.h>
+#include <vector>
 
 class Drawable {
 public:
-  virtual void drawToContext(Context context, float x, float y) = 0;
+  virtual std::vector<float> provide_points() = 0;
 };
