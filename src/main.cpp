@@ -8,9 +8,25 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#include "./shapes/Rectangle.hpp"
+
 using namespace std;
 
 int main() {
+
+  Rectangle r1(5, 10);
+
+  cout << "printing points \n";
+  int idx{0};
+  for (auto i : r1.provide_points()) {
+    cout << "point " << idx << ": " << i << endl;
+  }
+
+  return 0;
+
+}
+
+int glfw_main() {
 
   glfwInit();
 
