@@ -2,8 +2,7 @@
 # ----------------------------------------------------------------------------
 
 *~
-*.autosave
-*.a
+*.autosave *.a
 *.core
 *.moc
 *.o
@@ -82,7 +81,6 @@ Libraries/glad/CMakeFiles/
 Libraries/glad/cmake_install.cmake
 Libraries/glfw/.appveyor.yml
 Libraries/glfw/.mailmap
-Libraries/glfw/CMake/
 Libraries/glfw/CMakeCache.txt
 Libraries/glfw/CMakeFiles/
 Libraries/glfw/cmake_install.cmake
@@ -93,3 +91,6 @@ Libraries/glfw/tests/
 cmake_install.cmake
 main
 
+Libraries/glad/libglad.a
+Libraries/glfw/src/libglfw3.a
+Libraries/glfw/src/src/libglfw3.a
