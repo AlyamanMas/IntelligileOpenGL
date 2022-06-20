@@ -16,13 +16,9 @@ add_subdirectory(Libraries/glfw)
 
 #find_package(OpenGL REQUIRED)
 
-set(
-  SOURCE_FILES
-  main.cpp
-  src/shapes/Shape.cpp src/shapes/Shape.hpp
-  src/gdi/Drawable.cpp src/gdi/Drawable.hpp
-  src/gdi/Context.cpp src/gdi/Context.hpp
-)
+file(GLOB_RECURSE SOURCE_FILES
+     "src/*.cpp"
+     "src/*.hpp")
 
 add_executable(IntelligileOpenGL ${SOURCE_FILES})
 target_link_libraries(IntelligileOpenGL glfw)
