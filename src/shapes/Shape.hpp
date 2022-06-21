@@ -2,6 +2,7 @@
 
 #include "../gdi/Drawable.hpp"
 
+namespace shapes {
 struct Color {
   uint8_t red, green, blue;
 };
@@ -25,3 +26,4 @@ protected:
   Color color;
   float angle;
 };
+} // namespace shapes

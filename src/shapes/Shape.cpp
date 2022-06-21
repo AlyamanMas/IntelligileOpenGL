@@ -1,6 +1,6 @@
 #include "./Shape.hpp"
 
-#include <iostream>
+using namespace shapes;
 
 Color Shape::get_color() const { return color; };
 

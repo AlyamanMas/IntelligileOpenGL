@@ -8,22 +8,33 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "./shapes/Rectangle.hpp"
+#include "./shapes/Square.hpp"
 
 using namespace std;
+using namespace shapes;
+
+void print_points(Shape &s) {
+  cout << "printing points \n";
+  int idx{0};
+  for (auto i : s.provide_points()) {
+    cout << "point " << idx << ": " << i << endl;
+  }
+}
 
 int main() {
 
   Rectangle r1(5, 10);
 
-  cout << "printing points \n";
-  int idx{0};
-  for (auto i : r1.provide_points()) {
-    cout << "point " << idx << ": " << i << endl;
-  }
+  print_points(r1);
+
+  r1.set_height(7);
+
+  print_points(r1);
+
+  Square s1(2);
+  print_points(s1);
 
   return 0;
-
 }
 
 int glfw_main() {
