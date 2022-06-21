@@ -5,10 +5,10 @@ namespace shapes {
 class Rectangle : public Shape {
 public:
   Rectangle(float w, float h);
-  ~Rectangle(){};
+  virtual ~Rectangle(){};
 
   // Drawable implementation
-  std::vector<float> provide_points();
+  std::vector<gdi::GPoint> provide_points();
 
   // Getters and setters
   float get_width();

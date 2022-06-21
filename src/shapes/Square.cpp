@@ -1,6 +1,7 @@
 #include "Square.hpp"
 
 using namespace shapes;
+using namespace gdi;
 
 Square::Square(float s) : Rectangle(s, s){};
 
@@ -12,8 +13,4 @@ void Square::set_width(float w) {
 void Square::set_height(float h) {
   this->width = h;
   this->height = h;
-};
-
-std::vector<float> shapes::Square::provide_points() {
-  return std::vector<float>{0, this->get_width(), this->get_height(), 0};
 };

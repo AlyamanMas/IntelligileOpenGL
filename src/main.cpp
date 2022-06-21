@@ -17,7 +17,8 @@ void print_points(Shape &s) {
   cout << "printing points \n";
   int idx{0};
   for (auto i : s.provide_points()) {
-    cout << "point " << idx << ": " << i << endl;
+    cout << "point " << idx << ": " << i.to_string() << endl;
+    idx++;
   }
 }
 

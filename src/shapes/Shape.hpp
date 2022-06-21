@@ -7,10 +7,10 @@ struct Color {
   uint8_t red, green, blue;
 };
 
-class Shape : public Drawable {
+class Shape : public gdi::Drawable {
 public:
   Shape(Color color, float angle);
-  ~Shape(){};
+  virtual ~Shape(){};
 
   virtual float get_width() = 0;
   virtual float get_height() = 0;
