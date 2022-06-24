@@ -94,3 +94,6 @@ main
 Libraries/glad/libglad.a
 Libraries/glfw/src/libglfw3.a
 Libraries/glfw/src/src/libglfw3.a
+.cache/
+CMakeCache.txt.bak
+compile_commands.json
