@@ -22,7 +22,7 @@ public:
   // Size of alpha will be reduced to 7 bits
   ColorARGB(uint8_t red, uint8_t green, uint8_t blue, uint8_t alpha_7bits);
   ColorARGB(const ColorRGBA &in);
-  virtual ~ColorARGB(){};
+  ~ColorARGB(){};
 
   bool is_true_color();
 };
@@ -40,7 +40,7 @@ public:
   // Size of alpha will be reduced to 7 bits
   ColorRGBA(uint8_t red, uint8_t green, uint8_t blue, uint8_t alpha_7bits);
   ColorRGBA(const ColorARGB &in);
-  virtual ~ColorRGBA(){};
+  ~ColorRGBA(){};
 
   bool is_true_color();
 };
