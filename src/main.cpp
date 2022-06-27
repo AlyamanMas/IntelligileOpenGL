@@ -8,49 +8,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "./gdi/GView.hpp"
+#include "util.hpp"
 // #include "./shapes/Square.hpp"
 
 using namespace std;
 using namespace gdi;
 
 int main() {
-  GView my_view(400,600);
-  my_view.display_window();
+  cout << "Testing shapes: " << endl;
+  test_shapes();
 
-  return 0;
+  cout << "\nTesting color: " << endl;
+  test_gdi_color();
 }
-
-
-// using namespace shapes;
-
-// void print_points(Shape &s) {
-//   cout << "printing points \n";
-//   int idx{0};
-//   for (auto i : s.provide_points()) {
-//     cout << "point " << idx << ": " << i.to_string() << endl;
-//     idx++;
-//   }
-// }
-
-// int main_old() {
-
-  // Rectangle r1(5, 10);
-
-  // print_points(r1);
-
-  // r1.set_height(7);
-
-  // print_points(r1);
-
-  // Square s1(2);
-  // print_points(s1);
-
-  // s1.set_height(5);
-  // print_points(s1);
-
-  // return 0;
-// }
 
 int glfw_main() {
 
