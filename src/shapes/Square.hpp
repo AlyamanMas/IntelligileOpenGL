@@ -1,3 +1,6 @@
+#ifndef SQUARE_H_
+#define SQUARE_H_
+
 #include "Rectangle.hpp"
 #include <vector>
 
@@ -19,3 +22,5 @@ public:
   // float get_height();
 };
 } // namespace shapes
+
+#endif // SQUARE_H_

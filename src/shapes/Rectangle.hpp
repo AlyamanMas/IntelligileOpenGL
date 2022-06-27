@@ -1,3 +1,6 @@
+#ifndef RECTANGLE_H_
+#define RECTANGLE_H_
+
 #include "Shape.hpp"
 #include <vector>
 
@@ -22,3 +25,5 @@ protected:
   float height;
 };
 } // namespace shapes
+
+#endif // RECTANGLE_H_

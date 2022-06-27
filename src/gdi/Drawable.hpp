@@ -1,3 +1,6 @@
+#ifndef DRAWABLE_H_
+#define DRAWABLE_H_
+
 #include "Point.hpp"
 #include <vector>
 
@@ -9,3 +12,5 @@ public:
 };
 
 } // namespace gdi
+
+#endif // DRAWABLE_H_

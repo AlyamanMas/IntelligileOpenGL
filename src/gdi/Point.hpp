@@ -1,3 +1,6 @@
+#ifndef POINT_H_
+#define POINT_H_
+
 #include <cstdint>
 #include <iostream>
 #include <string>
@@ -14,3 +17,5 @@ struct GPoint {
   };
 };
 } // namespace gdi
+
+#endif // POINT_H_
