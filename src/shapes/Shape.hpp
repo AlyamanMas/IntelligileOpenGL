@@ -1,3 +1,6 @@
+#ifndef SHAPE_H_
+#define SHAPE_H_
+
 #include <cstdint>
 
 #include "../gdi/Drawable.hpp"
@@ -27,3 +30,5 @@ protected:
   float angle;
 };
 } // namespace shapes
+
+#endif // SHAPE_H_
