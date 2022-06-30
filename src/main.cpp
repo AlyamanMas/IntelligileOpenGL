@@ -20,6 +20,9 @@ int main() {
 
   cout << "\nTesting color: " << endl;
   test_gdi_color();
+
+  cout << "\nTesting GObject: " << endl;
+  test_gdi_gobject();
 }
 
 int glfw_main() {

@@ -1,4 +1,10 @@
 #include "util.hpp"
+#include "gdi/Point.hpp"
+#include "shapes/Rectangle.hpp"
+#include <cstdint>
+#include <memory>
+
+using namespace std;
 
 template <typename T> void display_hex(T &c) {
   void *p = &c;
@@ -69,3 +75,42 @@ int test_shapes() {
 
   return 0;
 }
+
+// gdi::GObject
+#include "gdi/GObject.hpp"
+
+void print_gpoints(const vector<GPoint> &x) {
+  uint32_t counter{0};
+  for (auto &i : x) {
+    cout << counter << ": " << i.to_string() << endl;
+    ++counter;
+  }
+}
+
+void print_drawables(const vector<vector<GPoint>> &x) {
+  for (auto &i : x) {
+    cout << endl;
+    print_gpoints(i);
+  }
+  cout << endl;
+}
+
+int test_gdi_gobject() {
+  GObject g1;
+  shared_ptr<Drawable> r1(new Rectangle(5, 10));
+  shared_ptr<Drawable> s1(new Square(2));
+
+  g1.insert_drawable(r1);
+  g1.insert_drawable(s1);
+
+  cout << "Printing G1(0, 0): " << endl;
+  print_drawables(g1.get_drawables());
+
+  g1.set_x(5);
+  g1.set_y(12);
+
+  cout << "Printing G1(5, 12): " << endl;
+  print_drawables(g1.get_drawables());
+
+  return 0;
+};

@@ -4,8 +4,7 @@
 #include <iostream>
 using namespace std;
 
-template<typename T>
-void display_hex(T &c);
+template <typename T> void display_hex(T &c);
 
 // gdi::Color
 int test_gdi_color();
@@ -14,5 +13,8 @@ int test_gdi_color();
 #include "gdi/Drawable.hpp"
 void print_points(gdi::Drawable &s);
 int test_shapes();
+
+// gdi::GObject
+int test_gdi_gobject();
 
 #endif // UTIL_H_
