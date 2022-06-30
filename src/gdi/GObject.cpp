@@ -50,6 +50,7 @@ const vector<vector<GPoint>> GObject::get_drawables() const {
   return drawables;
 };
 
-const vector<shared_ptr<Drawable>> &GObject::get_original_drawables() const {
+const vector<shared_ptr<Drawable>> &
+GObject::get_original_drawables() const {
   return this->content;
 };

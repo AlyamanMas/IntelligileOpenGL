@@ -26,7 +26,8 @@ public:
   ColorARGB(){};
   ColorARGB(uint8_t red, uint8_t green, uint8_t blue);
   // Size of alpha will be reduced to 7 bits
-  ColorARGB(uint8_t red, uint8_t green, uint8_t blue, uint8_t alpha_7bits);
+  ColorARGB(uint8_t red, uint8_t green, uint8_t blue,
+            uint8_t alpha_7bits);
   ColorARGB(const ColorRGBA &in);
   ~ColorARGB(){};
 
@@ -43,7 +44,8 @@ public:
   ColorRGBA(){};
   ColorRGBA(uint8_t red, uint8_t green, uint8_t blue);
   // Size of alpha will be reduced to 7 bits
-  ColorRGBA(uint8_t red, uint8_t green, uint8_t blue, uint8_t alpha_7bits);
+  ColorRGBA(uint8_t red, uint8_t green, uint8_t blue,
+            uint8_t alpha_7bits);
   ColorRGBA(const ColorARGB &in);
   ~ColorRGBA(){};
 

@@ -8,7 +8,8 @@ void GView::set_height(uint height){};
 
 // float GView::get_width() const {};
 // float GView::get_height() const {};
-gdi::GView::GView(uint height, uint width) : height(height), width(width) {
+gdi::GView::GView(uint height, uint width)
+    : height(height), width(width) {
 
   // shapes = vector<Drawable>{};
 

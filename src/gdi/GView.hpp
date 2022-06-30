@@ -28,7 +28,7 @@ public:
   // attributes, but rather get should return from window object
   // and set must invoke window object to resize, otherwise
   // field attributes and real window stay out of sync
-  
+
   // Getters and setters
   // float get_width() const;
   // float get_height() const;
