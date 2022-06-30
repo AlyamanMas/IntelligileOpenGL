@@ -12,10 +12,10 @@ using namespace std;
 namespace gdi {
 class GObject {
   vector<shared_ptr<Drawable>> content{};
-  float x, y;
+  float x{0}, y{0};
 
 public:
-  GObject();
+  GObject(){};
   GObject(float x, float y) : x{x}, y{y} {};
   virtual ~GObject(){};
 
